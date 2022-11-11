@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <!-- Bootstrap core CSS -->
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<main>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+
+    /* The popup form - hidden by default */
+    .form-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      z-index: 9;
+      top: 220px;
+      left: 8%;
+    }
+    
+    /* Add styles to the form container */
+    .form-container {
+      max-width: 500px;
+      padding: 10px;
+      background-color: #87CEFA;
+      
+    }
+    
+    /* When the inputs get focus, do something */
+    .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color: red;
+    }
+    
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+      opacity: 1;
+    }
+    </style>
+    
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        {% for video in videos %}
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{ video.thumbnail }}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"></img>
+            <div class="card-body">
+              <p class="card-text">{{ video.title }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a type="button" href="/migration/directing" class="btn btn-sm btn-outline-secondary">
+                    {% csrf_token %}
+                    View</a>
+                    <button type="button"  onclick="openForm()" class="btn btn-sm btn-outline-secondary" >edit</button>
+                    <center>
+                    <div class="form-popup" id="myForm">
+                      <form method="post" name="Translate"action="/migration/translate"  class="form-container" >
+                        {% csrf_token %}
+                        <h2>Select the Language</h2>
+                        <p>Select the language which you want to convert in a drop-down list.</p>
+                            <div type="text" name="convert">
+                            <label for="language">Choose a language:</label>
+                            <select name="language" id="language">
+                              <option value="en">English</option>
+                              <option value="de">German</option>
+                              <option value="fr">French</option>
+                              <option value="ar">Arabic</option>
+                              <option value="es">Español/Spanish</option>
+                              <option value="cmn-Hans">中文/Chinese</option>
+                              <option value="ja">日本語/Japanese</option>
+                              <option value="ko">한국어/Korean</option>
+                              <option value="de">Deutsch/German</option>
+                              <option value="fr">Français/French</option>
+                              <option value="it">Italiano/Italian</option>
+                              <option value="pt">Português/Portuguese</option>
+                              <option value="ru">Pусский/Esloven/Russian</option>
+                              <option value="nl">Nederlands/Dutch</option>
+                              <option value="ca">Català/Catalan</option>
+                              <option value="cs">Čeština/Czech</option>
+                              <option value="pl">Polski/Polish</option>
+                              <option value="fil">Filipino</option>
+                              <option value="sk">Slovenčina</option>
+                              <option value="fi">Suomi/Finland</option>
+                              <option value="sv">Svenska/Swedish</option>
+                              <option value="vi">Tiếng Việt/Vietnamese</option>
+                              <option value="tr">Türkçe/Turkish</option>
+                              <option value="ro">Română/Romanian</option> 
+                              <option value="uk">Українська/Ukrainian</option>
+                              <option value="hi">हिन्दी/Hindi</option>
+                              <option value="ne">नेपाली/Nepali</option>
+                              <option value="ur">نیپالی/Urdu</option>
+                              <option value="mr">मराठी/Marathi</option>
+                              <option value="pb">ਪੰਜਾਬੀ/Punjabi</option>
+                              <option value="gl">Galego</option>
+                              <option value="da">Dansk</option>
+                              <option value="af">Afrikaans</option>
+                              <option value="am">አማርኛ/Amárico</option>
+                              <option value="eu">Euskara/Basque</option>
+                              <option value="gu">ગુજરાતી/Gujarati</option>
+                              <option value="km">ភាសាខ្មែរ/Camboyan</option>
+                              <option value="ml">മലയാളം/Malayalam</option>
+                              <option value="lo">ລາວ/Lao</option>
+                              <option value="si">සිංහල/Sinhala</option>
+                              <option value="sw">Kiswahili</option>
+                              <option value="ta">தமிழ்/Tamil</option>
+                              <option value="te">తెలుగు/Telugu</option>
+                              <option value="th">ภาษาไทย/Thailand</option>
+                            </select>
+                            <br><br>
+                            <button class="btn btn-outline-success my-3 my-sm-1" type="submit">Translate</button>
+                          </div>
+                         
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                      </form>
+                    </div>
+                    <script>
+                    function openForm() {
+                      document.getElementById("myForm").style.display = "block";
+                    }
+                    
+                    function closeForm() {
+                      document.getElementById("myForm").style.display = "none";
+                    }
+                    var e = document.getElementById("language");
+                    function onChange() {
+                    var value = e.value;
+                    var text = e.options[e.selectedIndex].text;
+                    console.log(value, text);
+                    }
+                    e.onchange = onChange;
+                    onChange();
+                    </script>
+                  </center>
+                </div>
+                <small class="text-muted">{{ video.duration }} mins</small>
+              </div>
+            </div>
+          </div>
+        </div> 
+        {% endfor %}      
+      </div>
+    </div>
+  </div>
+
+</main>
+<section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Alpha example</h1>
+          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">Main call to action</a>
+            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          </p>
+        </div>
+</section>
+
+{% endblock body %}
