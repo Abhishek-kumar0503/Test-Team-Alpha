@@ -1,6 +1,9 @@
 <!-- ABOUT THE PROJECT -->
 # Youtube Audio Translator
 
+Team name : TEam Alpha
+Theme you are working on : Youtube Audio Translator
+
 ## 1. Abstract
 Website to view any youtube video in any desired language and also to manually record audio for a particular video and store it.
 
