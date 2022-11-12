@@ -8,7 +8,27 @@ The third part will be the implementation of converting the translated captions 
 
 Our final demo will be like a YouTube search engine-like interface with an option like converting it from one language to another language and there will be an embedded Youtube player-like video player in which the Youtube  Video will play muted and the translated audio will be played along the youtube video.
 
-Youtube Link - https://youtu.be/3BCpaVp1hdM
+
+## Which tech stack or tools are you using?
+Django framework, Python programming language 
+ 
+##How much have you implemented? 
+Milestones you have achieved : Successful extracted transcript from one language to another language and built a webpage with YouTube like search engine search bar.
+
+Milestones you plan to achieve in the next 24 hours: working on the audio processing of translated transcript by audiopy and Google-text-to-speech python module.
+
+## Live demo link  
+ ```sh
+    https://drive.google.com/file/d/17QYhTFfPo73mBV-9xsZcibc3JqwwlJzy/view?usp=share_link
+  ```  
+
+
+## How do you plan to work on the remarks provided in the ideation stage evaluation? 
+The work is going on..
+
+## Are you facing any issues?
+Yes, Searching stackoverrflow for the code help and some youtube tutorials...
+
 
 <!-- ABOUT THE PROJECT -->
 # In Detail
