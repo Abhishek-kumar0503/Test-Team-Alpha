@@ -1,8 +1,15 @@
 <!-- ABOUT THE PROJECT -->
 # Youtube Audio Translator
 
-Team name : TEam Alpha
-Theme you are working on : Youtube Audio Translator
+Team name: Alpha_CIC
+
+Working on the theme Audio Translator ( Mainly for Youtube )
+
+we are trying to solve this problem by dividing it into parts. In the first part, we will extract the captions of a youtube video using the youtube API. 
+The second part will be the implementation of converting the captions from one language to another language using google Translate.
+The third part will be the implementation of converting the translated captions to audio by using the audiopy python module and last we will try to play the youtube video muted with this translated audio.
+
+Our final demo will be like a YouTube search engine-like interface with an option like converting it from one language to another language and there will be an embedded Youtube player-like video player in which the Youtube  Video will play muted and the translated audio will be played along the youtube video.
 
 ## 1. Abstract
 Website to view any youtube video in any desired language and also to manually record audio for a particular video and store it.
