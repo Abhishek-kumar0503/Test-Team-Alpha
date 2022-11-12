@@ -1,6 +1,6 @@
-Team name: Alpha_CIC
+# Team name: Alpha_CIC
 
-Working on the theme Audio Translator ( Mainly for Youtube )
+# Working on the theme Audio Translator ( Mainly for YouTube )
 
 we are trying to solve this problem by dividing it into parts. In the first part, we will extract the captions of a youtube video using the youtube API. 
 The second part will be the implementation of converting the captions from one language to another language using google Translate.
@@ -9,7 +9,6 @@ The third part will be the implementation of converting the translated captions 
 Our final demo will be like a YouTube search engine-like interface with an option like converting it from one language to another language and there will be an embedded Youtube player-like video player in which the Youtube  Video will play muted and the translated audio will be played along the youtube video.
 
 Youtube Link - https://youtu.be/3BCpaVp1hdM
-
 
 <!-- ABOUT THE PROJECT -->
 # In Detail
@@ -33,7 +32,7 @@ To get a local copy up and running follow these simple steps.
 First clone the repository by running the following command in the terminal of your desired directory:
 
   ```sh
-   git clone https://github.com/csvinay/team-alpha.git
+   git clone https://github.com/Abhishek-kumar0503/Test-Team-Alpha.git
    ```
 
 Enter into the project directory by running the following command:
@@ -76,16 +75,17 @@ Run the django website using the below given command
   ```  
 
 ## 5. Output
-
-
+ ```sh
+  Under development, shortly output will be released 
+ ```
 
 ## 6. Roadmap
 
-<a href="https://github.com/csvinay/team-alpha/issues">Request Feature</a>
+<a href="https://github.com/Abhishek-kumar0503/Test-Team-Alpha/issues">Request Feature</a>
 
 ![youtube_language_translate_pipeline](https://user-images.githubusercontent.com/43710239/189086179-66cfd5dc-ebd4-448c-929d-323fcea196e3.png)
 
-See the [open issues](https://github.com/csvinay/team-alpha/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Abhishek-kumar0503/Test-Team-Alpha/issues) for a full list of proposed features (and known issues).
 
 ## 7. Contributing
 
@@ -96,3 +96,4 @@ See the [open issues](https://github.com/csvinay/team-alpha/issues) for a full l
 5. Open a Pull Request
 
 ## 8. References
+complying them.
