@@ -26,7 +26,7 @@ First clone the repository by running the following command in the terminal of y
 Enter into the project directory by running the following command:
 
   ```sh
-   cd team-alpha
+   cd Test-Team-Alpha
    ```
 Then setup the prerequisites to run the programs.
 
@@ -41,12 +41,12 @@ Option 2: Setup virtual environment.
 
 * create new virtual environment
   ```sh
-  python3 -m venv team-alpha
+  python3 -m venv Test-Team-Alpha
   ```  
   
 * activate virtual environemt
   ```sh
-  source team-alpha/bin/activate
+  source Test-Team-Alpha/bin/activate
   ```  
  
 * run the follwing command to download the dependencies 
