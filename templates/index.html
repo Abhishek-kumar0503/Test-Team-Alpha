@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+
+<link rel="stylesheet" href="static/nicepage.css" media="screen">
+<link rel="stylesheet" href="static/Home.css" media="screen">
+    <script class="u-script" type="text/javascript" src="static/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="static/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.21.5, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+  <body class="u-body u-xl-mode" data-lang="en">
+    <section class="u-clearfix u-image u-section-1" id="carousel_45ec" data-image-width="1920" data-image-height="1080">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-align-center u-custom-font u-font-montserrat u-text u-text-palette-4-light-1 u-text-1"> We Translate captions<br> enabled YouTube videos from one language to another language&nbsp;
+        </h1>
+        <!-- a class="u-active-palette-2-light-2 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-dark-1 u-palette-2-base u-radius-50 u-btn-1">Search</a-->
+        <form method="post" action="migration/search">
+          {% csrf_token %}
+          <div class="container my-4">
+            <center>
+              <div class="l-box">
+                <div class="tarea-wrap">
+                  <!--input type="text" id="video-link" name="video_link"-->
+                  <input type="text" id="Search" name="Search" autofocus placeholder="Paste Youtube link here">
+                  <!--a href="#" class="clear-btn"></a-->
+                </div>
+              </div>
+            <button class="btn btn-outline-success my-2 my-sm-1" type="submit">Search</button>
+            <h3>Paste URL link of Youtube Viedo</h3>
+            </center>
+          </div>
+        </form>
+      </div>
+    </section>
+
+<footer class="bd-footer py-4 py-md-5 mt-5 bg-light">
+    <div class="container py-4 py-md-5 px-4 px-md-3">
+      <div class="row">
+        <div class="col-lg-3 mb-3">
+          <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Alpha">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2" viewBox="0 0 118 94" role="img"><title>Alpha</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"/></svg>
+            <span class="fs-5">Alpha</span>
+          </a>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2">Designed and built with all the love in the world by the <a href="/docs/5.2/about/team/">Alpha team</a> with the help of <a href="...">our contributors</a>.</li>
+            
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="/">Home</a></li>
+            <li class="mb-2"><a href="/docs/5.2/">Docs</a></li>
+            <li class="mb-2"><a href="/docs/5.2/examples/">Examples</a></li>
+            <li class="mb-2"><a href="...">Icons</a></li>
+            <li class="mb-2"><a href="...">Themes</a></li>
+            <li class="mb-2"><a href="...">Blog</a></li>
+            <li class="mb-2"><a href="...">Swag Store</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Guides</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="...">Getting started</a></li>
+            <li class="mb-2"><a href="...">Starter template</a></li>
+            <li class="mb-2"><a href="...">Webpack</a></li>
+            <li class="mb-2"><a href="...">Parcel</a></li>
+            <li class="mb-2"><a href="...">Vite</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Projects</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="https://www.linkedin.com/company/82162540/admin/">Alpha LinkedIn</a></li>
+            <li class="mb-2"><a href="...">Aplha Twitter</a></li>
+            <li class="mb-2"><a href="...">Icons</a></li>
+            <li class="mb-2"><a href="...">RFS</a></li>
+            <li class="mb-2"><a href="...">npm starter</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Community</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="...">Issues</a></li>
+            <li class="mb-2"><a href="...">Discussions</a></li>
+            <li class="mb-2"><a href="...">Corporate sponsors</a></li>
+            <li class="mb-2"><a href="...">Open Collective</a></li>
+            <li class="mb-2"><a href="...">Slack</a></li>
+            <li class="mb-2"><a href="...">Stack Overflow</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+{% endblock body %}

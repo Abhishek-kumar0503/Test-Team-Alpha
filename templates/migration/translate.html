@@ -1,0 +1,40 @@
+{% extends 'migration/search.html' %}
+
+{% block body %}
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<main>
+<script>
+    const videoembed = localStorage.getItem('videoembed') + '?controls=0&mute=1&showinfo=0&rel=0&autoplay=0&loop=1';
+    const videoduration = localStorage.getItem('videoduration');
+    localStorage.clear(); 
+
+    console.log('Video url:', videoembed)
+    console.log('Video duration:', videoduration)
+
+    window.onload = function() {
+        document.getElementById("myLink").src=videoembed;
+    } 
+
+</script>
+
+<iframe id="myLink" width="731" height="441" src="">
+</iframe> 
+
+</main>
+<body>
+    <!--h3>This is page 2</h3>
+    <hr/>
+    The selected language is: <b>{{language}}</b>
+    <br/-->
+    <form method="GET" action="">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="desc">Transcript of Youtube video to its regional language..</label>
+            <textarea class="form-control" id="desc" rows="10" name="desc">{{desc}}</textarea>
+        </div>
+    </from>
+    
+</body>
+
+{% endblock body %}
