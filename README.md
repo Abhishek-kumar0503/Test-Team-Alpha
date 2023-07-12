@@ -48,11 +48,6 @@ Option 2: Setup virtual environment.
   ```sh
   source Test-Team-Alpha/bin/activate
   ```  
- 
-* run the follwing command to download the dependencies 
-  ```sh
-  pip install -r requirements.txt
-  ```  
 
 ## 4. Usage
 
